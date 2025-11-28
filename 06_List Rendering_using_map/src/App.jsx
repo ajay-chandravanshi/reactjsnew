@@ -107,10 +107,13 @@ const App = () => {
 
   return (
     <div className="parent">
-     {arr.map(function(elem){
+     {arr.map(function(elem,idx){
 
-      return <Card logo={elem.brandLogo} company={elem.companyName} date={elem.datePosted} post={elem.post} tag1={elem.tag1} tag2={elem.tag2} pay={elem.pay} location={elem.location}/>
+      return <div key={idx}>
+        <Card logo={elem.brandLogo} company={elem.companyName} date={elem.datePosted} post={elem.post} tag1={elem.tag1} tag2={elem.tag2} pay={elem.pay} location={elem.location}/>
+      </div>
      })}
+     
     </div>
   );
 };
